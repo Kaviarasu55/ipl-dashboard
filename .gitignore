@@ -1,0 +1,5 @@
+.env
+IPL.csv
+__pycache__/
+*.pyc
+.venv/
