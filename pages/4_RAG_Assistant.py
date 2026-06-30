@@ -52,7 +52,7 @@ Rules:
 
     with st.spinner("Thinking..."):
         code_response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="openai/gpt-oss-120b",
             messages=[{"role": "user", "content": code_prompt}],
         )
         generated_code = code_response.choices[0].message.content.strip()
@@ -76,7 +76,7 @@ Data result: {str(result)}
 This is the complete and correct answer from the dataset.Answer the question confidently in 2-3 clear sentences based on the data result.
 """
             explain_response = client.chat.completions.create(
-                model="llama-3.3-70b-versatile",
+                model="openai/gpt-oss-120b",
                 messages=[{"role": "user", "content": explain_prompt}],
             )
             st.success(explain_response.choices[0].message.content)

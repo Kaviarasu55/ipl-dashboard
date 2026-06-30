@@ -113,7 +113,7 @@ else:
     
         with st.spinner("Analysing..."):
            response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="openai/gpt-oss-120b",
             messages=[{"role": "user", "content": prompt}]
         )
         st.info(response.choices[0].message.content)
@@ -158,7 +158,7 @@ else:
     
      with st.spinner("Analysing..."):
         response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="openai/gpt-oss-120b",
             messages=[{"role": "user", "content": prompt}]
         )
         st.info(response.choices[0].message.content)
